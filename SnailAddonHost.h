@@ -132,7 +132,7 @@ struct SnailAddon
     virtual const QString maker()const = 0;
 	virtual const QString version()const = 0;
 	virtual const QString description()const = 0;
-    virtual void onRecevied(const QVector<Stock>& list,const CalcData& d1,const CalcData& d2,const CalcData& d3,const CalcData& d4,const CalcData& d5,const CalcData& d6) = 0;	
+    virtual void onRecevied(const QString& code,const QVector<Stock>& list) = 0;	
 };
 
 struct SnailAddonHost
@@ -177,7 +177,7 @@ struct SnailAddonHost
 
 	//static const int TAG_Algo_Exe_K_Daily = 0;
 	//virtual void execute(int flag) = 0;
-	virtual void append(const QString& code,const std::tuple<QString,float>& buy,const std::tuple<QString,float>& sale) = 0;
+	virtual void append(const QString& code,const QString& name,const std::tuple<QString,float>& buy,const std::tuple<QString,float>& sale,const QString& remark) = 0;
 };
 
 //²å¼þ·ûºÅ
