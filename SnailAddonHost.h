@@ -55,10 +55,6 @@ struct Stock
 	float increase;
 	float offset;
 
-	float ma5,v_ma5;
-	float ma10,v_ma10;
-	float ma20,v_ma20;
-
 	QString state;
 	QString date;
 	QString timeToMarket;
@@ -97,14 +93,6 @@ struct Stock
 		increase = 0.0;
 		offset = 0.0;
 
-		ma5 = 0.0f;
-		ma10 = 0.0f;
-		ma20 = 0.0f;
-
-		v_ma5 = 0.0f;
-		v_ma10 = 0.0f;
-		v_ma20 = 0.0f;
-
 		p1 = 0.0;
 		p2 = 0.0;
 
@@ -132,6 +120,7 @@ struct SnailAddon
     virtual const QString maker()const = 0;
 	virtual const QString version()const = 0;
 	virtual const QString description()const = 0;
+	virtual const QString tips()const = 0;
     virtual void onRecevied(const QString& code,const QVector<Stock>& list) = 0;	
 };
 
