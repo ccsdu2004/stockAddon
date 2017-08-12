@@ -165,8 +165,7 @@ struct SnailAddonHost
 	virtual bool isThisK(int id,const QVector<Stock>& list) = 0;
 
 	//static const int TAG_Algo_Exe_K_Daily = 0;
-	//virtual void execute(int flag) = 0;
-	virtual void append(const QString& code,const QString& name,const std::tuple<QString,float>& buy,const std::tuple<QString,float>& sale,const QString& remark) = 0;
+	virtual void append(const QString& code,const QString& name,const std::tuple<QString,float>& buy,const std::tuple<QString,float>& sale,int days,const QString& remark) = 0;
 };
 
 //²å¼þ·ûºÅ
